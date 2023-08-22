@@ -53,7 +53,7 @@ setbtn.addEventListener("click", () => {
   errorText.innerHTML = ``;
   max = +maxWeight;
 
-  displayMax.innerHTML = `<p>Max weight: ${max}</p>`;
+  displayMax.innerHTML = `<p>Max weight: <span>${max}</span>Kg</p>`;
 });
 
 // update current weight
@@ -77,20 +77,25 @@ selectIterms.addEventListener("change", () => {
   intoBag = iterms.find((iterm) => iterm.name === selectIterms.value);
 
   // restrict selection when max weight is exceeded
-
-  if (
-    selectedWeight >= maxWeight ||
-    selectedWeight + intoBag.weigth >= maxWeight
-  ) {
+  if (selectedWeight === maxWeight) {
     doneBtn.style.backgroundColor = "red";
+    errorText.innerHTML = `<p>You have reached maximum Sack Capasity...!</p>`;
+    return;
+  }
+  if (selectedWeight + intoBag.weigth > maxWeight) {
+    doneBtn.style.backgroundColor = "red";
+    errorText.innerHTML = `<p>You have reached maximum Sack Capasity, pick iterm with a lesser wieght between <span>${0}Kg</span> and <span>${max-selectedWeight}Kg</span></p>`;
     return;
   } else {
     // add iterm into the selected div
     itermsSeleced.push(intoBag);
 
+    // set the done button status
+    doneBtn.style.backgroundColor = "#2c922c";
+
     // upddate selected weight when selected
     selectedWeight = selectedWeight += intoBag.weigth;
-    currentWeight.innerHTML = `<p>Current weight: ${selectedWeight}</p>`;
+    currentWeight.innerHTML = `<p>Current weight: <span>${selectedWeight}</span>Kg</p>`;
 
     // display selected iterms as a list
     let list = itermsSeleced.map((iterm) => {
@@ -110,6 +115,7 @@ reset.addEventListener("click", () => {
   itermsSeleced = [];
   listIterms.innerHTML = ``;
   currentWeight.innerHTML = `<p>Current weight: ${selectedWeight}</p>`;
+  errorText.innerHTML = ``;
 
   displayMax.innerHTML = `<p>Max weight: ${max}</p>`;
 });
