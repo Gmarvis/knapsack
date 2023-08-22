@@ -55,7 +55,7 @@ h3 {
 }
 
 .display {
-  height: 30vh;
+  height: 20vh;
   border: 1px solid #d6d3d3;
   display: flex;
   flex-direction: column;
@@ -141,4 +141,18 @@ h3 {
   input {
     width: 40%;
   }
+}
+
+.results {
+  margin-top: 5px;
+  display: none;
+  border: 1px solid #a5a4a4;
+  justify-content: space-between;
+  padding: 0 5px;
+  min-height: 10vh;
+  text-align: center;
+}
+
+.dpresults p {
+    text-align: center;
 }
