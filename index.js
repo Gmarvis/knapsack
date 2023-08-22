@@ -84,7 +84,9 @@ selectIterms.addEventListener("change", () => {
   }
   if (selectedWeight + intoBag.weigth > maxWeight) {
     doneBtn.style.backgroundColor = "red";
-    errorText.innerHTML = `<p>You have reached maximum Sack Capasity, pick iterm with a lesser wieght between <span>${0}Kg</span> and <span>${max-selectedWeight}Kg</span></p>`;
+    errorText.innerHTML = `<p>You have reached maximum Sack Capasity, pick iterm with a lesser wieght between <span>${0}Kg</span> and <span>${
+      max - selectedWeight
+    }Kg</span></p>`;
     return;
   } else {
     // add iterm into the selected div
@@ -116,6 +118,6 @@ reset.addEventListener("click", () => {
   listIterms.innerHTML = ``;
   currentWeight.innerHTML = `<p>Current weight: ${selectedWeight}</p>`;
   errorText.innerHTML = ``;
-
+  doneBtn.style.backgroundColor = "#2c922c";
   displayMax.innerHTML = `<p>Max weight: ${max}</p>`;
 });
