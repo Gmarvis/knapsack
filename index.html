@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>knapsack</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <input type="number" id="maxweight" placeholder="enter max-weigth (kg)" />
+        <button id="setbtn">set weight</button>
+      </div>
+      <div class="selectiterms">
+        <select name="" id="select"></select>
+      </div>
+      <h3>Selected iterms</h3>
+      <div class="display" id="list">
+      
+      </div>
+      <h3>Status</h3>
+
+      <div class="status">
+        <div class="weight" id="current">
+
+        </div>
+        <div class="max" id="displaymax">
+            <p>Max weight: 0</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="donebtn">done</button>
+        <button id="reset">reset</button>
+      </div>
+      <div class="error" id="errortext">
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
