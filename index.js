@@ -128,7 +128,6 @@ reset.addEventListener('click', () => {
   displayMax.innerHTML = `<p>Max weight: ${max}</p>`
   resultsDiv.style.display = 'none'
   statusDiv.style.borderColor = '#2c922c'
-
 })
 
 // display knapsck status when the done button is clicked
