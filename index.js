@@ -7,6 +7,7 @@ const currentWeight = document.getElementById('current')
 const listIterms = document.getElementById('list')
 const resultsDiv = document.getElementById('results')
 const dpresults = document.getElementById('dpresults')
+const statusDiv = document.getElementById('status')
 
 const iterms = [
   { name: 'Sneakers', value: '5000 CFA', weigth: 4 },
@@ -82,6 +83,7 @@ selectIterms.addEventListener('change', () => {
   // restrict selection when max weight is exceeded
   if (selectedWeight === maxWeight) {
     doneBtn.style.backgroundColor = 'red'
+    statusDiv.style.borderColor = 'red'
     errorText.innerHTML = '<p>You have reached maximum Sack Capasity...!</p>'
     return
   }
@@ -125,6 +127,8 @@ reset.addEventListener('click', () => {
   doneBtn.style.backgroundColor = '#2c922c'
   displayMax.innerHTML = `<p>Max weight: ${max}</p>`
   resultsDiv.style.display = 'none'
+  statusDiv.style.borderColor = '#2c922c'
+
 })
 
 // display knapsck status when the done button is clicked

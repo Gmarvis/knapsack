@@ -76,7 +76,7 @@ h3 {
 
 .status {
   display: flex;
-  border: 1px solid #a5a4a4;
+  border: 1px solid #2c922c;
   justify-content: space-between;
   padding: 0 5px;
 }
