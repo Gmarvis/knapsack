@@ -32,6 +32,11 @@ h2 {
   color: #2c922c;
 }
 
+.actions button {
+  width: 20%;
+  height: 2rem;
+  }
+
 .top button:hover {
   background-color: #2c922c;
   cursor: pointer;
@@ -97,11 +102,6 @@ h3 {
   border: none;
 }
 
-.actions button {
-  width: 20%;
-  height: 2rem;
-}
-
 #reset {
   border: 1px solid red;
   transition: 0.3s ease-in-out;
@@ -110,7 +110,6 @@ h3 {
 #reset:hover {
   background-color: red;
   transition: 0.3s ease-in-out;
-
   color: #fff;
 }
 
@@ -154,5 +153,5 @@ h3 {
 }
 
 .dpresults p {
-    text-align: center;
+  text-align: center;
 }
